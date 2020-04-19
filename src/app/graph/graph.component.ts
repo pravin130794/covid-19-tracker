@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { GoogleChartInterface } from 'ng2-google-charts';
+import { DataService } from '../services/data.service';
+import { Subscription } from 'rxjs';
+import { ApiService } from '../services/api.service';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
+import { HttpResponse } from '@angular/common/http';
 declare var $: any;
 @Component({
   selector: 'app-graph',
@@ -7,22 +12,16 @@ declare var $: any;
   styleUrls: ['./graph.component.css']
 })
 export class GraphComponent implements OnInit {
-  public pieChart: GoogleChartInterface = {
-    chartType: 'PieChart',
-    dataTable: [
-      ['Task', 'Hours per Day'],
-      ['Work',     11],
-      ['Eat',      2],
-      ['Commute',  2],
-      ['Watch TV', 2],
-      ['Sleep',    7]
-    ],
-    // firstRowIsData: true,
-    options: {title: 'Tasks'},
-  };
-  constructor() { }
+  constructor(
+    private dataService: DataService,
+    private apiService: ApiService,
+    private ngxLoader: NgxUiLoaderService,
+  ) { }
 
   ngOnInit() {
+    // this.dataService.getValue().subscribe((resp: any) => {
+    //   console.log(resp);
+    // });
   }
 
 }

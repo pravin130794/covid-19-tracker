@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { IndiaComponent } from './india/india.component';
 
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'covid19-tracker', pathMatch: 'full'},
-  {path: 'covid19-tracker', component: DashboardComponent},
+  {path: '', redirectTo: 'COVID19/global', pathMatch: 'full'},
+  {path: 'COVID19/global', component: DashboardComponent},
+  {path: 'COVID19/india', component: IndiaComponent},
 ];
 
 @NgModule({

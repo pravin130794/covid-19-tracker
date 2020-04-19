@@ -10,6 +10,7 @@ import { throwError, Observable } from 'rxjs';
 })
 export class ApiService {
   apiUrl = environment.apiUrl;
+  indiaDataAPI = environment.indiaUrl;
   public questions = [];
   constructor(private httpClient: HttpClient, private router: Router) {
    }
@@ -54,6 +55,9 @@ export class ApiService {
     if (requestType === 'get' && data === undefined) {
         return this.httpClient.get(`${environment.apiUrl}/${apiCall}`);
     }
+    if (requestType === 'get' && data !== undefined) {
+      return this.httpClient.get(`${environment.indiaUrl}/${apiCall}`);
+  }
 
 }
 }
