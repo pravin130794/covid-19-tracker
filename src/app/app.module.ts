@@ -11,6 +11,7 @@ import { GraphComponent } from './graph/graph.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { IndiaComponent } from './india/india.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IndiaComponent } from './india/india.component';
     HeaderComponent,
     DashboardComponent,
     GraphComponent,
-    IndiaComponent
+    IndiaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

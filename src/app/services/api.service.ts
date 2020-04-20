@@ -27,10 +27,6 @@ export class ApiService {
     return throwError(errorMessage);
   }
 
-  getQuestions() {
-      return this.httpClient.get<{ message: string; questions: any }>( this.apiUrl + '/api/questions/get')
-  }
-
   public httpRequest(requestType: string, apiCall: string, data?: any): Observable<any> {
     if (data && Object.prototype.toString.call(data) === '[object Object]') {
       const allParams = Object.keys(data);

@@ -2,7 +2,7 @@
 <div class="container">
   <div class="mx-auto">
     <div class="form-group col-lg-5 mx-auto">
-      <select name="" class="form-control" id="c" formControlName="State" #input (change)='updateValues(input.value)'>
+      <select name="" class="form-control" id="c" #input (change)="updateValues(input.value)">
         <option value="" [selected]="true">Select State</option>
         <option value="{{con.state}}" *ngFor='let con of stateList'>{{con.state}}</option>
       </select>
@@ -23,7 +23,7 @@
       </div>
       <div class="extra content center aligned">
         <span class="floated">
-          {{currentDate | date}}
+          {{currentDate}}
         </span>
       </div>
     </div>
@@ -39,7 +39,7 @@
       </div>
       <div class="extra content center aligned">
         <span class="floated">
-          {{currentDate | date}}
+          {{currentDate}}
         </span>
       </div>
     </div>
@@ -55,7 +55,7 @@
       </div>
       <div class="extra content center aligned">
         <span class="floated">
-          {{currentDate | date}}
+          {{currentDate}}
         </span>
       </div>
     </div>
