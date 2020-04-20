@@ -1,3 +1,10 @@
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
 .item {
   padding: 10px;
   justify-content: center;
@@ -11,3 +18,5 @@
   margin: 0 auto;
   margin-top: 20px;
 }
+
+
