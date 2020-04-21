@@ -4,7 +4,7 @@
     <div class="form-group col-lg-5 mx-auto">
       <select name="" class="form-control" id="c"  #input (change)='updateValues(input.value)'>
         <option value="" [selected]="true">Select Country</option>
-        <option value="{{con.Country}}" *ngFor='let con of countryList'>{{con.Country}}</option>
+        <option value="{{con.Slug}}" *ngFor='let con of countryList'>{{con.Country}}</option>
       </select>
     </div>
   </div>

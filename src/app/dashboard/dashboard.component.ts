@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
     console.log(value);
     this.ngxLoader.start();
     if (value !== '') {
-      this.getCountryDetailsSubscription = this.apiService.httpRequest('get', 'country/' + value).subscribe((response: any) => {
+      this.getCountryDetailsSubscription = this.apiService.httpRequest('get', 'total/country/' + value).subscribe((response: any) => {
         this.ngxLoader.stop();
         if (response.length > 0 ) {
           this.CurrentData = response.pop();
