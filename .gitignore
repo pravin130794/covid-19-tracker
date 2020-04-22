@@ -48,3 +48,6 @@ package-lock.json
 Thumbs.db
 notes
 node_modules
+
+# Scripts
+deploy.sh
